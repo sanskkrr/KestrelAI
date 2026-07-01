@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+data/raw/
+data/processed/
+kestrel_data.zip
+kestrel_data_v2.zip
+runs/
+*.cache
+.DS_Store
