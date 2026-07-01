@@ -347,6 +347,6 @@ LinkedIn: https://linkedin.com/in/sanskar-chouksey-51a730362
 
 ⭐ If you found this project useful, consider giving it a star.
 
-Built with ❤️ using Python, PyTorch & YOLOv8
+Developed By Sanskar Chouksey
 
 </div>
