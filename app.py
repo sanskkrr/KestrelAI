@@ -189,28 +189,7 @@ if uploaded:
 
 else:
     st.info("👆 Upload a drone image or video to get started")
-    st.divider()
-    st.subheader("🖼️ Try an Example")
-
-    # Pick 6 random val images as examples
-    import random
-    val_dir = Path("data/processed/images/val")
-    example_images = random.sample(list(val_dir.glob("*.jpg")), min(6, len(list(val_dir.glob("*.jpg")))))
-
-    cols = st.columns(3)
-    for i, img_path in enumerate(example_images):
-        with cols[i % 3]:
-            img = cv2.imread(str(img_path))
-            img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            st.image(img_rgb, use_container_width=True, caption=img_path.name)
-            if st.button("Detect →", key=f"example_{i}"):
-                with st.spinner("Detecting..."):
-                    results = model(str(img_path), conf=conf_threshold, verbose=False)
-                annotated = results[0].plot()
-                annotated_rgb = cv2.cvtColor(annotated, cv2.COLOR_BGR2RGB)
-                st.image(annotated_rgb, use_container_width=True)
-                st.metric("Objects Found", len(results[0].boxes))
-
+    
    
     st.markdown("""
     **What KestrelAI detects:**
