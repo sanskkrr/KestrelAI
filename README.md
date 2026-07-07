@@ -132,4 +132,4 @@ not included in this repo due to size. download train + val sets and run `script
 
 ---
 
-made by Sanskar Chouksey
+developed by Sanskar Chouksey
